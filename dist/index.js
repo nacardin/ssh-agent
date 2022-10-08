@@ -380,6 +380,14 @@ try {
         //     return;
         // }
 
+        console.log("key", key);
+
+        if (!key.includes("fluvio-cloud-ops")) {
+            console.log(`Comment for (public) key '${key}' does not match GitHub URL pattern. Not treating it as a GitHub deploy key.`);
+
+            return;
+        }
+
         const sha256 = crypto.createHash('sha256').update(key).digest('hex');
         // const ownerAndRepo = parts[1].replace(/\.git$/, '');
 
