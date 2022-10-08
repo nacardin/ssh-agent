@@ -6,6 +6,8 @@ inputs:
         required: true
     ssh-auth-sock:
         description: 'Where to place the SSH Agent auth socket'
+    owner-and-repo:
+        description: 'Which repo to map key'
 runs:
     using: 'node12'
     main: 'dist/index.js'
