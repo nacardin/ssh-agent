@@ -60,6 +60,8 @@ try {
         //     return;
         // }
 
+        console.log("key", key);
+
         if (!key.includes("fluvio-cloud-ops")) {
             console.log(`Comment for (public) key '${key}' does not match GitHub URL pattern. Not treating it as a GitHub deploy key.`);
 
